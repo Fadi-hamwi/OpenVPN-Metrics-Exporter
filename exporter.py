@@ -43,8 +43,8 @@ def main():
     args = parser.parse_args()
 
     registry = CollectorRegistry()
-    vpn = VPN(args.host, args.p)
     while True:
+        vpn = VPN(args.host, args.p)
         try:
             with vpn.connection():
                 print(
