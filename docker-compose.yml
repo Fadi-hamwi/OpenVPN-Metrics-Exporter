@@ -1,0 +1,9 @@
+version: '3.9'
+services:
+  openvpn-exporter: 
+    build: .
+    image: "openvpn_exporter:latest"
+    container_name: openvpn-exporter
+    ports:
+      - "9176:9176"  # default one per: https://github.com/prometheus/prometheus/wiki/Default-port-allocations
+    command: -host 172.20.0.1 -p 7505 -l 9176 
