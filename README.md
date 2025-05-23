@@ -67,9 +67,10 @@ Replace `<exporter_host>` and `<exporter_port>` with the host and port where the
 
 ## 📈 Grafana Dashboard
 
-A prebuilt dashboard will be available soon.
+A prebuilt dashboard is available.
 
-You can also import it from [Grafana Dashboards]([https://grafana.com/grafana/dashboards](https://fadihamwi2001.grafana.net/public-dashboards/828dd56af38647f2b35d544d6c55133f)).
+You can import it from [Grafana Dashboards](https://ideone.com/RbfDkO) as a json format.
+
 
 ## License
 
