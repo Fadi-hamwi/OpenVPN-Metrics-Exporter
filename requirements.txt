@@ -1,0 +1,3 @@
+prometheus-client
+openvpn-api
+git+https://github.com/Fadi-hamwi/openvpn-status # tonyseek/openvpn-status module has a bug in dateformat I fixed it in my repo.
