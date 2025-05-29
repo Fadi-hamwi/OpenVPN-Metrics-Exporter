@@ -39,22 +39,22 @@ class OpenVPNCollector:
 
             # Create metric families for client metrics
             bytes_received = GaugeMetricFamily(
-                'openvpn_client_bytes_received',
+                'openvpn_client_bytes_received_total',
                 'Total bytes received by each VPN client',
                 labels=['common_name', 'real_addr',
-                        'virtual_addr', 'connection_time']
+                        'virtual_addr']
             )
             bytes_sent = GaugeMetricFamily(
-                'openvpn_client_bytes_sent',
+                'openvpn_client_bytes_sent_total',
                 'Total bytes sent by each VPN client',
                 labels=['common_name', 'real_addr',
-                        'virtual_addr', 'connection_time']
+                        'virtual_addr']
             )
             connected_since = GaugeMetricFamily(
-                'openvpn_client_connected_since',
+                'openvpn_client_connected_since_seconds',
                 'UNIX timestamp when each VPN client connected',
                 labels=['common_name', 'real_addr',
-                        'virtual_addr', 'connection_time']
+                        'virtual_addr']
             )
 
             # Process each client
@@ -63,7 +63,7 @@ class OpenVPNCollector:
                 real = str(client.real_address)
                 virt = real_to_virtual.get(real, "unknown")
                 ts = int(client.connected_since.timestamp())
-                labels = [cn, real, virt, str(ts)]
+                labels = [cn, real, virt]
 
                 bytes_received.add_metric(labels, client.bytes_received)
                 bytes_sent.add_metric(labels, client.bytes_sent)
