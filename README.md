@@ -1,4 +1,4 @@
-# OpenVPN Exporter
+# OpenVPN Exporter (Official Prometheus Exporter for openVPN can be seen in Official Prometheus page [here](https://prometheus.io/docs/instrumenting/exporters/#miscellaneous))
 
 A Prometheus exporter for OpenVPN, written in Python. It connects to the OpenVPN management interface to collect and expose metrics for monitoring your VPN server's performance and client connections.  
 Collects per-client session data from the management interface — including traffic stats, connection times, and IP addresses.
